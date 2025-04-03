@@ -34,7 +34,7 @@ Matrix Matrix::operator*(const Matrix &rhs) const {
     for (int i = 0; i < _size; i++) {
         for (int j = 0; j < _size; j++) {
             for (int k = 0; k <_size; k++) {
-                product += rhs.get_value(i, k) * this->get_value(i, k); 
+                product += rhs.get_value(i, k) * this->get_value(k, j); 
             }
             result.set_value(i, j, product);
             product = 0;
@@ -66,7 +66,7 @@ int Matrix::sum_diagonal_major() const {
 int Matrix::sum_diagonal_minor() const {
     int sum = 0;
     for (int i = 0; i < _size; i++) {
-        sum += this->get_value(i, _size-i);
+        sum += this->get_value(i, (_size-1) - i);
     }
     return sum;
 };
