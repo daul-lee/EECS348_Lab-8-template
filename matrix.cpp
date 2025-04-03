@@ -14,7 +14,7 @@ Matrix::Matrix(std::size_t size) : _size(size) {
     }
 }
 
-Matrix::Matrix(std::vector<std::vector<int>> matrix) : _matrix(matrix) {
+Matrix::Matrix(std::vector<std::vector<int>> matrix) : _matrix(matrix), _size(matrix.size()) {
 
 }
 
@@ -22,7 +22,7 @@ Matrix Matrix::operator+(const Matrix &rhs) const {
     Matrix result(_size);
     for (int i = 0; i < _size; i++) {
         for (int j = 0; j < _size; j++) {
-            result.set_value(i, j, rhs.get_value(i, j) + this->get_value(i, j));
+            result.set_value(i, j, (rhs.get_value(i, j) + this->get_value(i, j)));
         }
     }
     return result;
