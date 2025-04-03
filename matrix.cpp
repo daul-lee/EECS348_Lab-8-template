@@ -34,10 +34,10 @@ Matrix Matrix::operator*(const Matrix &rhs) const {
     for (int i = 0; i < _size; i++) {
         for (int j = 0; j < _size; j++) {
             for (int k = 0; k <_size; k++) {
-                product += rhs.get_value(i, k) * this->get_value(k, j); 
+                product += this->get_value(k, j) * rhs.get_value(i, k); 
             }
-            result.set_value(i, j, product);
-            product = 0;
+        result.set_value(i, j, product);
+        product = 0;
         }
     }
     return result;
