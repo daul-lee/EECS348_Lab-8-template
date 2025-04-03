@@ -112,7 +112,7 @@ TEST(MatrixImplementation, SetValue_Random) {
     }
 }
 
-TEST(MatrixImplementation, Addition_Basic) {
+TEST(MatrixImplementationAdd, Addition_Basic) {
     std::vector<std::vector<int>> initial = {
         { 1, 1, 1 },
         { 1, 1, 1 },
@@ -130,7 +130,7 @@ TEST(MatrixImplementation, Addition_Basic) {
     }
 }
 
-TEST(MatrixImplementation, Addition_Random) {
+TEST(MatrixImplementationAdd, Addition_Random) {
     std::vector<std::vector<int>> initial1 = {
         { 0, 0, 8 },
         { 6, 7, 8 },
@@ -158,7 +158,7 @@ TEST(MatrixImplementation, Addition_Random) {
     }
 }
 
-TEST(MatrixImplementation, Multiplication_Basic) {
+TEST(MatrixImplementationMul, Multiplication_Basic) {
     std::vector<std::vector<int>> initial = {
         { 1, 1, 1 },
         { 1, 1, 1 },
@@ -176,7 +176,7 @@ TEST(MatrixImplementation, Multiplication_Basic) {
     }
 }
 
-TEST(MatrixImplementation, Multiplication_Random) {
+TEST(MatrixImplementationMul, Multiplication_Random) {
     std::vector<std::vector<int>> initial1 = {
         { 0, 0, 8 },
         { 6, 7, 8 },
