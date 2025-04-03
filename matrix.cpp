@@ -13,9 +13,6 @@ Matrix::Matrix(std::vector<std::vector<int>> matrix) : _matrix(matrix) {
     std::vector<std::vector<int>> _matrix(_size, std::vector<int>(_size));
 }
 
-Matrix::~Matrix() {
-}
-
 Matrix Matrix::operator+(const Matrix &rhs) const {
     Matrix result(_size);
     for (int i = 0; i < _size; i++) {
