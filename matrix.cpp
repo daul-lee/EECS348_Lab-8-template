@@ -14,7 +14,7 @@ Matrix::Matrix(std::size_t size) : _size(size) {
     }
 }
 
-Matrix::Matrix(std::vector<std::vector<int>> matrix) : _matrix(matrix), _size(matrix.size()) {
+Matrix::Matrix(std::vector<std::vector<int> > matrix) : _matrix(matrix), _size(matrix.size()) {
 
 }
 
